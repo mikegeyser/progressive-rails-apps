@@ -1,54 +1,25 @@
-<!doctype html>
-<html class="no-js">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta charset="UTF-8" />
-  <meta name="author" content="<%= CONFIG[:meta_author] %>" />
-  <meta name="revisit-after" content="3 days" />
-  <meta name="robots" content="<%= CONFIG[:meta_robots] || 'index,follow' %>" />
-  <%= display_meta_tags site: CONFIG[:title_short] %>
-  <meta name="geo.position" CONTENT="<%= CONFIG[:geo_position] %>">
-  <meta name="geo.placename" CONTENT="<%= CONFIG[:geo_address] %>">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
-  <%= favicon_link_tag %>
-  <%= yield :head %>
-  <%= auto_discovery_link_tag(:atom, articles_url(format: "atom"), {title: CONFIG[:feed_title]}) %>
-  <%= stylesheet_link_tag    "lines/application", media: "all" %>
-  <%= javascript_include_tag "lines/application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<% if current_lines_user %>
-  <%= render_navbar do %>
-    <%= link_to t('lines.buttons.new_article').html_safe, new_admin_article_path, class: "btn btn-new-article highlight" %>  
-    <%= link_to t('lines.buttons.dashboard').html_safe, admin_articles_path, class: "btn btn-view-blog" %>
-  <% end %>
-  <div class="spacer"></div>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render 'shared/head' %>
+  </head>
+  <body>
+    <%= render 'shared/header' %>
 
-<%= render 'layouts/lines/markdown_cheatsheet' %>
+    <div class="container">
+      <div>
+        <div id="logo">
+          <a href="/">
+            <% if CONFIG[:logo].empty? %> <%= CONFIG[:blog_name] %> <% else %>
+            <img src="<%= CONFIG[:logo] %>" alt="<%= CONFIG[:blog_name] %>" /> <% end %>
+          </a>
+        </div>
+        <div id="lines"><%= CONFIG[:short_description].html_safe %></div>
+      </div>
 
-<header>
-  <div id="logo">
-    <a href="/">
-      <% if CONFIG[:logo].empty? %>
-        <%= CONFIG[:blog_name] %>
-      <% else %>
-        <img src="<%= CONFIG[:logo] %>" alt="<%= CONFIG[:blog_name] %>" />
-      <% end %>
-    </a>
-  </div>
-  <div id="lines">
-    <%= CONFIG[:short_description].html_safe %>
-  </div>
-</header>
+      <%= render 'lines/shared/flash' %> <%= yield %>
+    </div>
 
-<div class="container">
-  <%= render 'lines/shared/flash' %>
-  <%= yield %>
-</div>
-
-<%= render 'lines/shared/footer' %>
-
-</body>
+    <%= render 'shared/footer' %>
+  </body>
 </html>

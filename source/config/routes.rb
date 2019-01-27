@@ -1,37 +1,12 @@
-Lines::Engine.routes.draw do
+Rails.application.routes.draw do
+  get 'home/index'
+  get 'head', controller: 'application'
+  get 'header', controller: 'application'
+  get 'footer', controller: 'application'
+  get 'blahblah', controller: 'application'
 
-  get 'password_resets/new'
+  mount Lines::Engine => "/blog"
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get 'password_resets/edit'
-
-  get 'login', to: 'sessions#new', as: 'login'
-  get 'logout', to: 'sessions#destroy', as: 'logout'
-  get 'tags/:tag', to: 'articles#index', as: :tag
-
-  resources :sessions
-  resources :password_resets,     only: [:new, :create, :edit, :update]
-
-  resources :articles, only: [:index, :show] do
-    get 'page/:page', action: :index, on: :collection
-  end
-
-  resources :short_articles, only: [:index, :show], controller: :articles do
-    get 'page/:page', action: :index, on: :collection
-  end
-
-  # Admin namespace
-  namespace :admin do
-    resources :articles do
-      get :autocomplete_tag_name, on: :collection
-      post :toggle_publish#, on: :member
-      post :toggle_feature#, on: :member
-    end
-    resources :authors
-    resources :pictures, only: [:create, :update, :destroy]
-    resources :users
-    root :to => 'articles#index'
-  end
-  
-  root :to => 'articles#index'
-
+  root 'home#index'
 end

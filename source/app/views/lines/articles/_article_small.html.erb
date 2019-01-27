@@ -1,24 +1,14 @@
-<div class="article <%= article_class %>">
-<% cache "#{article_small}_small" do %>
-  <% unless article_small.image_url.blank? %>
-    <div class="hero_image">
-      <%= link_to article_path(article_small) do %>
-        <img src="<%= article_small.image_url %>" alt="<%= article_small.title %>" />
-      <% end %>
-    </div>
-  <% end %>
-
-  <div class="article_header">
-    <h1><%= link_to article_small.title, article_path(article_small) %></h1>
-    <h2><%= article_small.sub_title %></h2>
-    <div class="author_name"><span>by</span> <%= display_article_authors(article_small) %></div>
+<article>
+  <div class="hero_image pull-left img-responsive" style="background-image: url('<%= article_small.image_url %>');">
+    &nbsp;
   </div>
 
-  <div class="article_teaser">
-    <%= render_teaser(article_small).html_safe %>
-    <div class="more-link">
-      <%= link_to "Read full article", article_path(article_small) %>
-    </div>
+  <div class="text">
+    <p class="small-paragraph"><%= article_small.sub_title %></p>
+    <h3><%= link_to article_small.title, article_path(article_small) %></h3>
+    <p>by <%= display_article_authors(article_small) %></p>
+    <p><%= render_teaser(article_small).html_safe %></p>
+    <h3><small><%= link_to "read more... ", article_path(article_small) %></small></h3>
   </div>
-<% end %>
-</div>
+  <div class="clearfix"></div>
+</article>

@@ -1,0 +1,9 @@
+I"¼(function() {
+  jQuery(function() {
+    return $('.article .article_content p img').each(function(image) {
+      return $(this).parent().css('padding', '0');
+    });
+  });
+
+}).call(this);
+:ET

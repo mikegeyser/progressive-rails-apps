@@ -1,0 +1,31 @@
+  
+  ************************************
+         INSTALLTION FINISHED
+  ************************************
+
+      1. Please adjust the configuration file to your needs:
+
+        config/lines_config.yml
+
+      2. Run database migrations:
+
+        rake db:migrate
+
+      3. Add a new user to login:
+
+        rake lines:add_user
+
+      4. Visit you blog at '/blog/' or '/blog/admin' for the admin interface
+
+      5. Post some awesome articles! 
+
+
+
+      Other available rake tasks:
+
+        rake lines:db:seed      # Load lines seeds (you need to run 'rake lines:add_user' first)
+
+
+  ************************************
+
+

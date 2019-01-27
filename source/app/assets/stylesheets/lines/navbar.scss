@@ -1,0 +1,227 @@
+@import 'variables_and_mixins';
+
+#navbar {
+  font-family: $MerriweatherSans;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $height-alpha;
+  background-color: $color-alpha;
+  color: #fff;
+  z-index: 100;
+  overflow: visible;
+  .navbar-inner {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    line-height: $height-alpha;
+    font-size: $size-beta;
+    height: $height-alpha;
+    .buttons {
+      form.button_to {
+        display: inline-block;
+      }
+      a.btn, input.btn {
+        font-size: $size-beta;
+        border: 0 none;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0.5em 1em;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: $font-alpha;
+        &:hover {
+          background-color: lighten($color-alpha, 10%);
+        }
+        &.highlight {
+          background-color: $color-beta;
+          &:hover {
+            background-color: lighten($color-beta, 10%);
+          }
+        }
+      }
+    }
+  }
+  .submenu {
+    background-color: $color-alpha;
+    position: absolute;
+    top: $height-alpha;
+    left: 0;
+    width: 100%;
+    display: none;
+    .submenu-inner {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 20px 20px;
+      ul {
+        list-style: none;
+        border-top: 1px solid $color-delta;
+        padding-top: 1em;
+        li {
+          font-size: $size-beta;
+          &+li {
+            // margin-top: 1em;
+          }
+          &.small {
+            font-size: $size-alpha;
+            padding: 0.5em 1em;
+          }
+        }
+        &+ul {
+          margin-top: 1em;
+        }
+      }
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: $size-beta;
+        display: block;
+        padding: 0.5em 1em;
+        &:hover {
+          background-color: lighten($color-alpha, 10%);
+        }
+      }
+    }
+  }
+}
+
+.btn-menu {
+  float: right;
+  width: $height-alpha;
+  height: $height-alpha;
+  cursor: pointer;
+  position: relative;
+  .stripes {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    transition: all 0.3s ease;
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+    &:before {
+      transform: translateY(-250%) rotate(0deg);
+    }
+    &:after {
+      transform: translateY(250%) rotate(0deg);
+    }
+  }
+  &.active {
+    .stripes {
+      transform: translate3d(-50%, -50%, 0) rotate(90deg);
+      background-color: transparent;
+      &:before {
+        transform: translateY(0%) rotate(45deg);
+      }
+      &:after {
+        transform: translateY(0%) rotate(-45deg);
+      }
+    }
+  }
+  &:hover {
+    background-color: lighten($color-alpha, 10%);
+  }
+}
+
+.spacer {
+  height: $height-alpha;
+  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin-bottom: $gutter-gamma;
+}
+
+/*
+ * Markdown Cheatsheet
+ */
+.cheatsheet {
+  position: fixed;
+  display: none;
+  max-width: calc(960px - 4em);
+  width: calc(100% - 4em);
+  z-index: 50;
+  margin: 0 auto;
+  top: calc(56px + 2em);
+  left: 0;
+  right: 0;
+  bottom: 2em;
+  overflow: visible;
+  font-family: $font-beta;
+  .cheatsheet-close {
+    position: absolute;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 3px;
+    background-color: $color-beta;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    right: -24px;
+    top: -24px;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: lighten($color-beta, 10%);
+    }
+  }
+  .cheatsheet-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    z-index: 1;
+    padding: 2em;
+    font-size: $size-beta;
+    h2 {
+      margin-top: 0;
+      font-family: $font-alpha;
+      font-size: $size-beta;
+      color: #9793a0;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+    p {
+      margin-bottom: $gutter-beta;
+    }
+    a {
+      border-bottom: 1px solid $color-gamma;
+      color: $color-alpha;
+      &:hover {
+        border-bottom-color: $color-beta;
+        color: $color-beta;
+      }
+    }
+    .formatting {
+      color: rgba(#000, 0.3);
+    }
+  }
+  .cheatsheet-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-alpha, 0.8);
+    z-index: 0;
+  }
+}

@@ -1,0 +1,8 @@
+<%= content_for :navbar do  %>
+  <%= render_navbar do %>
+    <%= button_to (@article.published ? "Unpublish" : "Publish"), admin_article_toggle_publish_path(@article), :class => "btn btn-save-publish highlight" %>
+    <%= link_to 'Edit', edit_admin_article_path(@article), :class => "btn btn-edit" %>
+  <% end %>
+<% end %>
+
+<%= render @article, article_counter: -1 %>

@@ -1,0 +1,22 @@
+<%= render_navbar {} %>
+<div class="login">
+  <h2>Administration Login</h2>
+
+  <%= form_tag sessions_path do %>
+    <div class="input-field">
+      <%= text_field_tag :email, params[:email], placeholder: 'E-Mail' %>
+    </div>
+    <div class="input-field">
+      <%= password_field_tag :password, "", placeholder: 'Password' %>
+    </div>
+    <br style="clear: both;" />
+    <div class="submit">
+      <%= submit_tag t('lines.buttons.login') %>
+      <%= t 'lines.or' %> <a href="/"><%= t('lines.go_back_to_blog') %></a>
+    </div>
+    <br style="clear: both;" />
+    <div class="additional_actions">
+      <%= link_to t('lines.forgot_password'), new_password_reset_path %>
+    </div>
+  <% end %>
+</div>

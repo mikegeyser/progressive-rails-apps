@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Lines" %></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Codemirror Start -->
+  <link rel="stylesheet" href="/codemirror/lib/codemirror.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/codemirror/theme/lines.css" type="text/css" media="all" />
+  <script type="text/javascript" src="/codemirror/lib/codemirror.js"></script>
+  <script type="text/javascript" src="/codemirror/addon/display/placeholder.js"></script>
+  <script type="text/javascript" src="/codemirror/addon/mode/overlay.js"></script>
+  <script type="text/javascript" src="/codemirror/addon/selection/active-line.js"></script>
+  <script type="text/javascript" src="/codemirror/mode/markdown/markdown.js"></script>
+  <script type="text/javascript" src="/codemirror/mode/gfm/gfm.js"></script>
+  <!-- Codemirror End -->
+  <%= stylesheet_link_tag    "lines/admin/admin", media: "all" %>
+  <%= javascript_include_tag "lines/admin/admin" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+</head>
+<body>
+
+<%= render 'layouts/lines/markdown_cheatsheet' %>
+
+<div id="main" role="main">
+  <div class="container">
+    <div class="content">
+       <div class="row">
+        <div class="span12">
+          <div class="spacer"></div>
+          <%= render 'lines/shared/flash' %>
+          <%= yield %>
+        </div>
+      </div>
+      <footer>
+      </footer>
+    </div>
+  </div> <!--! end of .container -->
+</div> <!--! end of #main -->
+
+</body>
+</html>

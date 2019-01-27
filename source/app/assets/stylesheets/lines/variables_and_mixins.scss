@@ -1,0 +1,27 @@
+@import 'lines/admin/variables_and_mixins';
+
+$max-width: 960px;
+
+$darkgrey: #333;
+$lightgrey: #666;
+$orange: #ee4422;
+
+$red: #c10020;
+$black: #100719;
+$grey: #9793a0;
+$white: #fff;
+$green: #00c289;
+$darkred: #730035;
+
+$SourceSansPro: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+$MerriweatherSans: 'Merriweather Sans', 'Helvetica', 'Arial', sans-serif;
+$Merriweather: 'Merriweather', 'Georgia', serif;
+$Monospace: 'Fira mono', monospace;
+
+@mixin addTransition($x) {
+  transition: all $x+s ease;
+  -o-transition: all $x+s ease;
+  -ms-transition: all $x+s ease;
+  -moz-transition: all $x+s ease;
+  -webkit-transition: all $x+s ease;
+}

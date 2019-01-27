@@ -1,0 +1,18 @@
+<div class="navbar navbar-fixed-top">
+  <nav class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/admin"><%= CONFIG[:title_short] %></a>
+
+      <ul class="user-info">
+        <% if current_lines_user %>
+          <li><%= current_lines_user.email %></li>
+          <li><a href="<%= logout_path %>"><%= t('lines.buttons.logout').html_safe %></a></li>
+        <% end %>
+      </ul>
+      <br class="clear" />
+    </div>
+  </nav>
+</div>
+
+
+    

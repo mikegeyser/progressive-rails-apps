@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <%= display_meta_tags site: CONFIG[:title_short] %>
+  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+  <%= favicon_link_tag %>
+  <%= yield :head %>
+  <%= stylesheet_link_tag    "lines/application", media: "all" %>
+  <%= javascript_include_tag "lines/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield :navbar %>
+
+<%= render 'layouts/lines/markdown_cheatsheet' %>
+
+<header>
+  <div id="logo">
+    <a href="/">
+      <% if CONFIG[:logo].empty? %>
+        <%= CONFIG[:blog_name] %>
+      <% else %>
+        <img src="<%= CONFIG[:logo] %>" alt="<%= CONFIG[:blog_name] %>" />
+      <% end %>
+    </a>
+  </div>
+  <div id="lines">
+    <%= CONFIG[:short_description].html_safe %>
+  </div>
+</header>
+
+<div class="container">
+  <%= render 'lines/shared/flash' %>
+  <%= yield %>
+</div>
+
+<%= render 'lines/shared/footer' %>
+
+</body>
+</html>

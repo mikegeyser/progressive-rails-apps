@@ -1,0 +1,6 @@
+<%= content_for :admin_nav do %>
+  <%= link_to t('lines.buttons.new_article').html_safe, new_admin_article_path, class: "btn btn-new-article" %>
+<% end %>
+
+<%= render 'lines/admin/articles/form' %>
+<%= render 'lines/admin/articles/picture_box' %>

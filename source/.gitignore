@@ -1,0 +1,14 @@
+.bundle/
+log/*.log
+pkg/
+spec/dummy/public/uploads/
+spec/dummy/uploads
+spec/dummy/log/*.log
+spec/dummy/tmp
+spec/dummy/public/assets
+/lines-engine-*.gem
+node_modules/
+.DS_Store
+tmp/
+/doc/
+.yardoc

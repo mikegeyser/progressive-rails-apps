@@ -1,0 +1,24 @@
+<%= render_navbar do %>
+  <%= link_to 'Edit', edit_admin_author_path(@author), class: "btn btn-new-author highlight" %>
+  <%= link_to 'Dashboard', lines.admin_root_path, class: "btn btn-view-blog" %>
+<% end %>
+
+<div class="articles-list">
+  <div class="article published">
+    <div class="title">
+      <%= @author.name %>
+    </div>
+    <div class="subtitle">
+      <%= markdown @author.description %>
+    </div>
+    <div class="actions">
+      <div class="left">
+        <%= mail_to @author.email, @author.email  %>
+      </div>
+      <div class="right">
+        <%= link_to "Website", @author.gplus_profile, class: "btn-unpublish" if @author.gplus_profile %>
+      </div>
+    </div>
+  </div>
+</div>
+

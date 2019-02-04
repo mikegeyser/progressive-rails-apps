@@ -12,5 +12,28 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
+
+function setClass(event) {
+  var isHomeActive = '';
+  var isBlogActive = '';
+
+  if (window.location.pathname.match(/\/blog\/.*/) || window.location.pathname === '/blog') {
+    isBlogActive = 'active';
+  }
+
+  if (window.location.pathname === '/') {
+    isHomeActive = 'active';
+  }
+
+  document.getElementById('home').className = isHomeActive;
+  document.getElementById('blog').className = isBlogActive;
+}
+
+document.addEventListener('DOMContentLoaded', function(e) {
+  if (event.target.readyState === 'interactive') {
+    setClass(e);
+  }
+});
+
+// document.addEventListener('turbolinks:load', setClass);

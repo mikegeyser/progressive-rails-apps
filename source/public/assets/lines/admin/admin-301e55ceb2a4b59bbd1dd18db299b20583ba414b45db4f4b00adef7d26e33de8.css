@@ -1,0 +1,1014 @@
+@import url(//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic,900,900italic);
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,700);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900);
+@import url(/fira-mono/fira-mono.css);
+/* 300, 400, 600 */
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+/* 300, 400, 600 */
+@import url(/iconfont/iconfont.css);
+/*
+ * Variables
+ */
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+/* 300, 400, 600 */
+@import url(/iconfont/iconfont.css);
+/*
+ * Variables
+ */
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+@import url(/iconfont/iconfont.css);
+@import url(../../jquery-ui/core.css);
+@import url(../../jquery-ui/datepicker.css);
+@import url(../../jquery-ui/theme.css);
+/* line 3, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar {
+  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #100719;
+  color: #fff;
+  z-index: 100;
+  overflow: visible;
+}
+/* line 14, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  line-height: 56px;
+  font-size: 1.063rem;
+  height: 56px;
+}
+/* line 23, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons form.button_to {
+  display: inline-block;
+}
+/* line 26, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons a.btn, #navbar .navbar-inner .buttons input.btn {
+  font-size: 1.063rem;
+  border: 0 none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Merriweather Sans", sans-serif;
+}
+/* line 36, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons a.btn:hover, #navbar .navbar-inner .buttons input.btn:hover {
+  background-color: #2a1241;
+}
+/* line 39, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons a.btn.highlight, #navbar .navbar-inner .buttons input.btn.highlight {
+  background-color: #c10020;
+}
+/* line 41, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons a.btn.highlight:hover, #navbar .navbar-inner .buttons input.btn.highlight:hover {
+  background-color: #f40028;
+}
+/* line 48, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu {
+  background-color: #100719;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+/* line 55, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+/* line 60, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner ul {
+  list-style: none;
+  border-top: 1px solid #403947;
+  padding-top: 1em;
+}
+/* line 64, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner ul li {
+  font-size: 1.063rem;
+}
+/* line 69, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner ul li.small {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+}
+/* line 74, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner ul + ul {
+  margin-top: 1em;
+}
+/* line 78, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  display: block;
+  padding: 0.5em 1em;
+}
+/* line 84, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner a:hover {
+  background-color: #2a1241;
+}
+
+/* line 92, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu {
+  float: right;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  position: relative;
+}
+/* line 98, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu .stripes {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  transition: all 0.3s ease;
+}
+/* line 107, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu .stripes:before, .btn-menu .stripes:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+/* line 115, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu .stripes:before {
+  transform: translateY(-250%) rotate(0deg);
+}
+/* line 118, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu .stripes:after {
+  transform: translateY(250%) rotate(0deg);
+}
+/* line 123, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu.active .stripes {
+  transform: translate3d(-50%, -50%, 0) rotate(90deg);
+  background-color: transparent;
+}
+/* line 126, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu.active .stripes:before {
+  transform: translateY(0%) rotate(45deg);
+}
+/* line 129, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu.active .stripes:after {
+  transform: translateY(0%) rotate(-45deg);
+}
+/* line 134, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu:hover {
+  background-color: #2a1241;
+}
+
+/* line 139, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.spacer {
+  height: 56px;
+  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin-bottom: 80px;
+}
+
+/*
+ * Markdown Cheatsheet
+ */
+/* line 151, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet {
+  position: fixed;
+  display: none;
+  max-width: calc(960px - 4em);
+  width: calc(100% - 4em);
+  z-index: 50;
+  margin: 0 auto;
+  top: calc(56px + 2em);
+  left: 0;
+  right: 0;
+  bottom: 2em;
+  overflow: visible;
+  font-family: "Fira Mono", monospace;
+}
+/* line 164, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-close {
+  position: absolute;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 3px;
+  background-color: #c10020;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  right: -24px;
+  top: -24px;
+  transition: all 0.3s ease;
+}
+/* line 179, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-close:hover {
+  background-color: #f40028;
+}
+/* line 183, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+  z-index: 1;
+  padding: 2em;
+  font-size: 1.063rem;
+}
+/* line 194, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner h2 {
+  margin-top: 0;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.063rem;
+  color: #9793a0;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+/* line 203, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner p {
+  margin-bottom: 22px;
+}
+/* line 206, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner a {
+  border-bottom: 1px solid #9793a0;
+  color: #100719;
+}
+/* line 209, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner a:hover {
+  border-bottom-color: #c10020;
+  color: #c10020;
+}
+/* line 214, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner .formatting {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 218, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 7, 25, 0.8);
+  z-index: 0;
+}
+
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+/* 300, 400, 600 */
+/*
+ * Variables
+ */
+/*
+ * Alerts and messages
+ */
+/* line 5, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation, .alert {
+  background-color: #730035;
+  border: 0 none;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
+}
+/* line 13, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation.alert-success, .alert.alert-success {
+  background-color: #00c289;
+}
+/* line 14, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation.alert-notice, .alert.alert-notice {
+  background-color: #9793a0;
+}
+/* line 17, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation .close, .alert .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: block;
+  color: #fff;
+}
+/* line 25, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation h2, .alert h2 {
+  color: #fff;
+  margin-top: 0;
+  text-transform: none;
+}
+/* line 26, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation ul, .alert ul {
+  padding-left: 1em;
+}
+
+/*
+ * Reset
+ */
+/* line 13, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* line 20, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+/* line 24, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+html, body {
+  height: 100%;
+  font-size: 16px;
+}
+
+/*
+ * Defaults
+ */
+/* line 32, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  color: #100719;
+}
+/* line 35, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+body.no-scroll {
+  overflow-y: hidden;
+}
+
+/* line 40, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* line 45, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+h2 {
+  font-size: 1.063rem;
+  color: #9793a0;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 80px;
+  margin-bottom: 22px;
+}
+
+/* line 54, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+input, textarea {
+  font-size: 1.063rem;
+  font-family: "Merriweather Sans", sans-serif;
+  resize: none;
+}
+
+/*
+ * Login
+ */
+/* line 65, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.login a {
+  color: #100719;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+}
+/* line 69, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.login a:hover {
+  border-bottom-color: #c10020;
+}
+/* line 72, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.login a:active {
+  color: #c10020;
+}
+
+/*
+ * Content
+ */
+/* line 81, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.content {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px 80px 20px;
+  margin: 0 auto;
+}
+
+/* line 88, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.articles-list {
+  margin-bottom: 2em;
+}
+
+/* line 92, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article, .author {
+  border-bottom: 1px solid #9793a0;
+}
+/* line 94, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article + .article, .article + .author, .author + .article, .author + .author {
+  margin-top: 22px;
+}
+/* line 99, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article.unpublished .title a, .author.unpublished .title a {
+  color: #100719;
+}
+/* line 106, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article.published .title a, .author.published .title a {
+  color: #9793a0;
+}
+/* line 111, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .title, .article .name, .author .title, .author .name {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+/* line 114, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .title a, .article .name a, .author .title a, .author .name a {
+  color: #100719;
+}
+/* line 118, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .subtitle, .article .email, .author .subtitle, .author .email {
+  margin-bottom: 22px;
+  font-size: 1rem;
+}
+/* line 121, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .subtitle a, .article .email a, .author .subtitle a, .author .email a {
+  color: #9793a0;
+}
+/* line 125, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions, .author .actions {
+  font-size: 1.063rem;
+  margin-bottom: 6px;
+}
+/* line 128, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions a, .author .actions a {
+  color: #9793a0;
+  text-transform: uppercase;
+  padding: 0 0.5em;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 135, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions .btn-edit, .author .actions .btn-edit {
+  color: #c10020;
+}
+/* line 138, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions .btn-unfeature, .author .actions .btn-unfeature {
+  color: #c10020;
+}
+/* line 142, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions .btn-feature:hover, .author .actions .btn-feature:hover {
+  color: #c10020;
+}
+/* line 146, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions .btn-publish, .author .actions .btn-publish {
+  color: #c10020;
+}
+/* line 153, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions .btn-delete:hover, .author .actions .btn-delete:hover {
+  color: #c10020;
+}
+/* line 158, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions .left a, .article .actions .right a, .author .actions .left a, .author .actions .right a {
+  float: left;
+}
+/* line 161, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions .left:after, .article .actions .right:after, .author .actions .left:after, .author .actions .right:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* line 165, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions .left, .author .actions .left {
+  float: left;
+}
+/* line 168, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions .right, .author .actions .right {
+  float: right;
+}
+/* line 171, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.article .actions:after, .author .actions:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*
+ * Forms
+ */
+/* line 181, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form input[type="text"], form input[type="password"], form input[type="email"], form textarea {
+  width: 100%;
+  border-bottom: 1px solid #9793a0;
+  padding: 0.5em;
+  overflow: hidden;
+  font-family: "Fira Mono", monospace;
+  line-height: 1.6;
+}
+/* line 188, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form input[type="text"]:focus, form input[type="password"]:focus, form input[type="email"]:focus, form textarea:focus {
+  border-bottom-color: #c10020;
+}
+/* line 191, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form input[type="text"].title, form input[type="password"].title, form input[type="email"].title, form textarea.title {
+  font-size: 1.5rem;
+}
+/* line 195, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form input[type="checkbox"] {
+  display: none;
+}
+/* line 197, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form input[type="checkbox"] + label {
+  position: relative;
+  display: block;
+  font-size: 1.063rem;
+  margin-bottom: 22px;
+  padding-left: calc(6px + 1.5em);
+  cursor: pointer;
+}
+/* line 204, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form input[type="checkbox"] + label:after {
+  content: "\e602";
+  font-family: 'iconfont';
+  position: absolute;
+  color: #9793a0;
+  left: 0;
+  top: 50%;
+  font-size: 1.5em;
+  transform: translateY(-50%);
+}
+/* line 217, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form input[type="checkbox"]:checked + label:after {
+  content: "\e601";
+  color: #c10020;
+}
+/* line 225, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .documents label {
+  color: #c10020;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* line 229, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .documents label span {
+  color: #9793a0;
+}
+/* line 233, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .documents input {
+  display: none;
+}
+/* line 236, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .documents .btn-delete-attachment {
+  color: #9793a0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 22px;
+  font-size: 1.063rem;
+}
+/* line 243, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .documents .btn-delete-attachment:hover {
+  color: #c10020;
+}
+/* line 247, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .documents .hidden {
+  display: none;
+}
+/* line 251, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload {
+  margin-bottom: 1em;
+  background-color: #9793a0;
+  color: #fff;
+  position: relative;
+  min-height: 7em;
+}
+/* line 257, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload:before {
+  content: "No image";
+  position: absolute;
+  z-index: 0;
+  left: 2em;
+  bottom: 2em;
+  line-height: 1;
+  padding: 1em;
+}
+/* line 266, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload input {
+  display: none;
+}
+/* line 269, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .btn-change-hero {
+  background-color: #403947;
+  text-transform: uppercase;
+  padding: 1em;
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+  border-radius: 4px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+/* line 281, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .btn-change-hero:hover {
+  background-color: #5a5063;
+}
+/* line 285, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload > img {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+/* line 291, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay {
+  position: fixed;
+  display: none;
+  max-width: calc(960px - 4em);
+  width: calc(100% - 4em);
+  z-index: 50;
+  margin: 0 auto;
+  top: calc(56px + 2em);
+  left: 0;
+  right: 0;
+  bottom: 2em;
+}
+/* line 302, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-close {
+  position: absolute;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 3px;
+  background-color: #c10020;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  right: -24px;
+  top: -24px;
+  transition: all 0.3s ease;
+}
+/* line 317, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-close:hover {
+  background-color: #f40028;
+}
+/* line 321, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+  z-index: 1;
+  padding: 2em;
+}
+/* line 331, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner h2 {
+  margin-top: 0;
+}
+/* line 334, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner .btn-remove-hero {
+  background-color: #9793a0;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+/* line 341, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner .btn-remove-hero.show {
+  display: block;
+}
+/* line 344, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner .btn-remove-hero:hover {
+  background-color: #b1aeb8;
+}
+/* line 348, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner label {
+  background-color: #c10020;
+  padding: 0.5em 1em;
+  display: block;
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+/* line 355, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner label:hover {
+  background-color: #f40028;
+}
+/* line 360, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner .hero-images img {
+  width: calc(50% - 0.5em);
+  display: block;
+  float: left;
+}
+/* line 364, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner .hero-images img:nth-of-type(odd) {
+  margin-right: 0.5em;
+}
+/* line 367, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner .hero-images img:nth-of-type(even) {
+  margin-left: 0.5em;
+}
+/* line 370, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .upload-overlay-inner .hero-images img:nth-of-type(n+3) {
+  margin-top: 1em;
+}
+/* line 376, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .hero-upload .upload-overlay .hero-background-overlay {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 7, 25, 0.8);
+  z-index: 0;
+}
+/* line 388, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .input-field {
+  position: relative;
+  margin-bottom: 1em;
+}
+/* line 391, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .input-field:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* line 395, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .input-field.required:after {
+  content: "*";
+  position: absolute;
+  color: #c10020;
+  right: 0.5em;
+  font-family: "Fira Mono", monospace;
+  top: 0.5em;
+}
+/* line 404, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .input-field.required.editor:after {
+  right: 68px;
+}
+/* line 411, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .submit input[type="submit"] {
+  background-color: #c10020;
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+/* line 419, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+form .submit input[type="submit"]:hover {
+  background-color: #f40028;
+}
+
+/* line 426, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay {
+  position: fixed;
+  display: none;
+  max-width: calc(960px - 4em);
+  width: calc(100% - 4em);
+  z-index: 50;
+  margin: 0 auto;
+  top: calc(56px + 2em);
+  left: 2em;
+  right: 2em;
+  bottom: 2em;
+}
+/* line 437, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-close {
+  position: absolute;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 3px;
+  background-color: #c10020;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  right: -24px;
+  top: -24px;
+  transition: all 0.3s ease;
+}
+/* line 452, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-close:hover {
+  background-color: #f40028;
+}
+/* line 456, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+  z-index: 1;
+  padding: 2em;
+}
+/* line 466, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner h2 {
+  margin-top: 0;
+}
+/* line 470, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner form input {
+  display: none;
+}
+/* line 473, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner form label {
+  background-color: #c10020;
+  padding: 0.5em 1em;
+  display: block;
+  margin-bottom: 1em;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+/* line 481, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner form label:hover {
+  background-color: #f40028;
+}
+/* line 488, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .images .image-preview {
+  position: relative;
+  width: calc(50% - 0.5em);
+  height: 0;
+  padding-bottom: calc((50% - 0.5em) / 16 * 9);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  float: left;
+}
+/* line 497, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .images .image-preview form {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 501, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .images .image-preview form button {
+  display: block;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+}
+/* line 512, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .images .image-preview form button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 517, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .images .image-preview:nth-of-type(odd) {
+  margin-right: 0.5em;
+}
+/* line 520, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .images .image-preview:nth-of-type(even) {
+  margin-left: 0.5em;
+}
+/* line 523, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .images .image-preview:nth-of-type(n+3) {
+  margin-top: 1em;
+}
+/* line 529, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .upload {
+  width: 100%;
+  height: 20px;
+  position: relative;
+  margin-bottom: 1em;
+}
+/* line 534, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .upload .progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+/* line 539, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .upload .progress .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #c10020;
+  z-index: 0;
+}
+/* line 547, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-overlay-inner .upload .progress .percent {
+  position: absolute;
+  z-index: 1;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  line-height: 20px;
+  text-align: center;
+}
+/* line 559, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.images-overlay .images-background-overlay {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 7, 25, 0.8);
+  z-index: 0;
+}
+
+/* line 571, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.cm-movingwidget {
+  position: absolute;
+  top: 8.5px;
+  right: 0;
+  text-align: center;
+  color: #9793a0;
+  cursor: pointer;
+  z-index: 40;
+  transform: translateX(0) translateY(calc(-50% + 13px));
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  font-size: 48px;
+  line-height: 1;
+}
+/* line 584, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.cm-movingwidget:hover {
+  color: #c10020;
+}
+
+/* line 588, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+.cm-s-lines.CodeMirror {
+  width: calc(100% - 68px);
+}
+
+/*
+ * Pagination
+ */
+/* line 595, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+#pagination {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  margin: 1.8em auto 0 auto;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  text-align: center;
+}
+/* line 602, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+#pagination a {
+  color: #9793a0;
+}
+/* line 604, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+#pagination a:hover {
+  color: lighen(#9793a0, 10%);
+}
+/* line 607, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+#pagination .newer, #pagination .older, #pagination .page {
+  margin: 0 1em;
+}
+/* line 608, /Users/mikegeyser/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/lines-engine-1.2.6.1/app/assets/stylesheets/lines/admin/admin.scss */
+#pagination .current {
+  color: #100719;
+}

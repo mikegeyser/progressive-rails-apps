@@ -6,18 +6,7 @@
   <body>
     <%= render 'shared/header' %>
 
-    <div class="container">
-      <div>
-        <div id="logo">
-          <a href="/">
-            <% if CONFIG[:logo].empty? %> <%= CONFIG[:blog_name] %> <% else %>
-            <img src="<%= CONFIG[:logo] %>" alt="<%= CONFIG[:blog_name] %>" /> <% end %>
-          </a>
-        </div>
-        <div id="lines"><%= CONFIG[:short_description].html_safe %></div>
-      </div>
-
-      <%= render 'lines/shared/flash' %> <%= yield %>
+    <%= yield %>
     </div>
 
     <%= render 'shared/footer' %>

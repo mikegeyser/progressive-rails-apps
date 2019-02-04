@@ -1,31 +1,33 @@
-<%= render 'shared/header' %>
 <section class="slider">
   <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="item"> <img data-src="assets/slider/image_1920x1000.jpg" alt="first slide" src="assets/slider/image_1920x1000.jpg">
+      <div class="item">
+        <%= image_tag "slider/image_1920x1000.jpg" %>
         <div class="container">
           <div class="carousel-caption">
-            <p class="smally">Donec odio. Quisque volutpat mattis eros. </p>
+            <p class="smally">Donec odio. Quisque volutpat mattis eros.</p>
             <h1 class="">Vivamus adipiscing, eros eu pretiu</h1>
-            <p>Convallis ligula ullamcorper lacinia. Etiam dapibus leo eu leo tempus sodales vitae non nulla. </p>
+            <p>Convallis ligula ullamcorper lacinia. Etiam dapibus leo eu leo tempus sodales vitae non nulla.</p>
             <p><a class="btn btn-default btn-lg" href="#" role="button">get started</a></p>
           </div>
         </div>
       </div>
-      <div class="item"> <img data-src="assets/slider/image_1920x1000.jpg" alt="second slide" src="assets/slider/image_1920x1000.jpg">
+      <div class="item">
+        <%= image_tag "slider/image_1920x1000.jpg" %>
         <div class="container">
           <div class="carousel-caption">
-            <p class="smally">Arcu convallis congue. Praesent nec magna porta </p>
+            <p class="smally">Arcu convallis congue. Praesent nec magna porta</p>
             <h1 class="">Tellus aliquet malesuada pharetra</h1>
-            <p>Rhoncus justo. Ut et porta turpis. Sed facilisis, justo quis venenatis molestie. </p>
+            <p>Rhoncus justo. Ut et porta turpis. Sed facilisis, justo quis venenatis molestie.</p>
             <p><a class="btn btn-default btn-lg" href="#" role="button">get started</a></p>
           </div>
         </div>
       </div>
-      <div class="item active"> <img data-src="assets/slider/image_1920x1000.jpg" alt="third slide" src="assets/slider/image_1920x1000.jpg">
+      <div class="item active">
+        <%= image_tag "slider/image_1920x1000.jpg" %>
         <div class="container">
           <div class="carousel-caption">
-            <p class="smally">Lectus sagittis porta a nec erat. </p>
+            <p class="smally">Lectus sagittis porta a nec erat.</p>
             <h1 class="">Class aptent taciti sociosqu ad litora</h1>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
             <p><a class="btn btn-default btn-lg" href="#" role="button">get started</a></p>
@@ -33,14 +35,23 @@
         </div>
       </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon carousel-control-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon carousel-control-right"></span></a> </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"
+      ><span class="glyphicon carousel-control-left"></span
+    ></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"
+      ><span class="glyphicon carousel-control-right"></span
+    ></a>
+  </div>
 </section>
 <!--end of slider section-->
 <section class="main__middle__container homepage">
   <div class="row text-center headings no-margin nothing">
     <div class="container">
       <h1 class="page_title">Vivamus pretium sapien sem, vel porttitor.</h1>
-      <p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.</p>
+      <p>
+        Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet mollis tortor
+        congue. Sed quis mauris sit amet magna accumsan tristique.
+      </p>
       <p><a class="btn btn-info btn-lg" href="#" role="button">read more</a></p>
     </div>
   </div>
@@ -51,15 +62,21 @@
       <div class="col-md-6">
         <h3><a href="#">Commodo id natoque malesuada sollicitudin elit suscipit. Nam nec turpis consequat.</a></h3>
         <p class="small-paragraph">Vivamus vestibulum nulla nec ante.</p>
-        <img src="assets/content__images/image_460x190.jpg" alt="pic" class="img-rounded img-responsive">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+        <%= image_tag "content__images/image_460x190.jpg" %>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam
+          malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+        </p>
         <p><a class="btn btn-default btn-md" href="#" role="button">Learn more</a></p>
       </div>
       <div class="col-md-6">
         <h3><a href="#">Commodo id natoque malesuada sollicitudin elit suscipit. Nam nec turpis consequat.</a></h3>
         <p class="small-paragraph">Vivamus vestibulum nulla nec ante.</p>
-        <img src="assets/content__images/image_460x190.jpg" alt="pic" class="img-rounded img-responsive">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+        <%= image_tag "content__images/image_460x190.jpg" %>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam
+          malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+        </p>
         <p><a class="btn btn-default btn-md" href="#" role="button">Learn more</a></p>
       </div>
     </div>
@@ -76,18 +93,24 @@
         </ol>
         <div class="carousel-inner">
           <div class="item active">
-            <p>"Nullam malesuada erat ut turpis. Donec odio. Quisque volutpat mattis eros.  Suspendisse urna 
-              nibh, viverra non, semper suscipit, posuere a, pede."</p>
+            <p>
+              "Nullam malesuada erat ut turpis. Donec odio. Quisque volutpat mattis eros. Suspendisse urna nibh, viverra
+              non, semper suscipit, posuere a, pede."
+            </p>
             <p class="small-paragraph"><small>- Richard Johnson, Company Manager</small></p>
           </div>
           <div class="item">
-            <p>"Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna 
-              nibh, viverra non, semper suscipit, posuere a, pede."</p>
+            <p>
+              "Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra
+              non, semper suscipit, posuere a, pede."
+            </p>
             <p class="small-paragraph"><small>- Tom Felix, Sales Consultant</small></p>
           </div>
           <div class="item">
-            <p>"Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna Donec odio.
-              nibh, viverra non, semper suscipit, posuere a, pede."</p>
+            <p>
+              "Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna Donec odio. nibh, viverra
+              non, semper suscipit, posuere a, pede."
+            </p>
             <p class="small-paragraph"><small>- Sarah Jones, Web Manager</small></p>
           </div>
         </div>
@@ -100,49 +123,44 @@
       <p class="small-paragraph text-center">Cras iaculis ultricies nulla.</p>
       <div class="col-md-4">
         <h3><a href="#">Modern Design</a><span class="small-paragraph">Maecenas fermentum semper porta.</span></h3>
-        <img src="assets/content__images/image_300x190.jpg" alt="image" class="img-responsive img-rounded">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. </p>
-        <p><a class="btn btn-info btn-md" href="#" role="button">Learn more</a> 
+        <%= image_tag "content__images/image_300x190.jpg" %>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+        <p><a class="btn btn-info btn-md" href="#" role="button">Learn more</a></p>
       </div>
+
       <div class="col-md-4 middle">
         <h3><a href="#">High Quality</a><span class="small-paragraph">Maecenas fermentum semper porta.</span></h3>
-        <img src="assets/content__images/image_300x190.jpg" alt="image" class="img-responsive img-rounded">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. </p>
-        <p><a class="btn btn-info btn-md" href="#" role="button">Learn more</a> 
+        <%= image_tag "content__images/image_300x190.jpg" %>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+        <p><a class="btn btn-info btn-md" href="#" role="button">Learn more</a></p>
       </div>
+
       <div class="col-md-4">
         <h3><a href="#">Quick Support</a><span class="small-paragraph">Maecenas fermentum semper porta.</span></h3>
-        <img src="assets/content__images/image_300x190.jpg" alt="image" class="img-responsive img-rounded">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. </p>
-        <p><a class="btn btn-info btn-md" href="#" role="button">Learn more</a> 
+        <%= image_tag "content__images/image_300x190.jpg" %>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+        <p><a class="btn btn-info btn-md" href="#" role="button">Learn more</a></p>
       </div>
     </div>
   </div>
 </section>
-<%= render 'shared/footer' %>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script type="text/javascript" src="assets/jquery.min.js"></script> 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="assets/bootstrap.min.js"></script> 
 <script type="text/javascript">
-
-$('.carousel').carousel({
-  interval: 3500, // in milliseconds
-  pause: 'none' // set to 'true' to pause slider on mouse hover
-})
-
+  $('.carousel').carousel({
+    interval: 3500, // in milliseconds
+    pause: 'none' // set to 'true' to pause slider on mouse hover
+  });
 </script>
 <script type="text/javascript">
-$( "a.submenu" ).click(function() {
-$( ".menuBar" ).slideToggle( "normal", function() {
-// Animation complete.
-});
-});
-$( "ul li.dropdown a" ).click(function() {
-$( "ul li.dropdown ul" ).slideToggle( "normal", function() {
-// Animation complete.
-});
-$('ul li.dropdown').toggleClass('current');
-});
+  $('a.submenu').click(function() {
+    $('.menuBar').slideToggle('normal', function() {
+      // Animation complete.
+    });
+  });
+  $('ul li.dropdown a').click(function() {
+    $('ul li.dropdown ul').slideToggle('normal', function() {
+      // Animation complete.
+    });
+    $('ul li.dropdown').toggleClass('current');
+  });
 </script>

@@ -1,0 +1,42 @@
+<section class="main__middle__container">
+  <section class="recent-posts">
+    <div class="container">
+      <div class="row no_padding no-margin nothing">
+        <h2 class="page__title text-center">our blog</h2>
+        <span class="sep"></span>
+        <p class="smaller text-center">
+          Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas
+          tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros.
+        </p>
+        <div class="col-md-9"><%= render partial: 'article_collection', collection: @articles[0, 3] %></div>
+        <div class="col-md-3">
+          <div class="icon-item">
+            <p class="small-paragraph">Lorem ipsum dolor sit amet</p>
+            <h4><a href="#">Aenean nonummy hendrerit mauris. Phasellus porta.</a></h4>
+          </div>
+          <div class="icon-item">
+            <p class="small-paragraph">Lorem ipsum dolor sit amet</p>
+            <h4><a href="#">Donec odio. Quisque iste volutpat mattis eros.</a></h4>
+          </div>
+          <div class="icon-item">
+            <p class="small-paragraph">Lorem ipsum dolor sit amet</p>
+            <h4><a href="#">Nullam malesuada erat ut turpis. Praesent dapibus, neque id cursus faucibus</a></h4>
+          </div>
+          <div class="icon-item">
+            <p class="small-paragraph">Lorem ipsum dolor sit amet</p>
+            <h4><a href="#">Praesent dapibus, neque id cursus faucibus</a></h4>
+          </div>
+          <div class="icon-item">
+            <p class="small-paragraph">Lorem ipsum dolor sit amet</p>
+            <h4><a href="#">Dapibus, neque id cursus faucibus</a></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<% if @articles.total_pages > 1 %>
+<hr />
+<div id="pagination"><%= paginate @articles, outer_window: 1, window: 2, theme: 'lines' %></div>
+<% end %>

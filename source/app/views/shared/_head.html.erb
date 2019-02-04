@@ -1,9 +1,21 @@
-<%= csrf_meta_tags %>
-<%= csp_meta_tag %>
+<%= csrf_meta_tags %> <%= csp_meta_tag %>
 
-<link href='assets/bootstrap.min.css' rel='stylesheet'>
-<link href='assets/bootstrap-theme.min.css' rel='stylesheet'>
-<link href='assets/magnific-popup.css' rel='stylesheet'>
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<link href="/third-party/stylesheets/bootstrap.min.css" rel="stylesheet" />
+<link href="/third-party/stylesheets/bootstrap-theme.min.css" rel="stylesheet" />
+<link href="/third-party/stylesheets/magnific-popup.css" rel="stylesheet" /> <%= stylesheet_link_tag 'application',
+media: 'all' %>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript" src="/third-party/javascripts/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/third-party/javascripts/bootstrap.min.js"></script>
+
+<%= javascript_include_tag 'application' %>
+
+<script type="text/javascript">
+    let isProduction = <%= Rails.env.production? %>;
+
+    if (isProduction && 'serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+    }
+</script>

@@ -1,0 +1,20 @@
+<section class="main__middle__container">
+  <div class="container article first">
+    <div class="hero_image" style="background-image: url('<%= @article.image_url %>');">
+      <div class="article_header">
+        <h1><%= @article.title %></h1>
+        <h2><%= @article.sub_title %></h2>
+        <div class="author_name"><span>by</span> <%= display_article_authors(@article) %></div>
+      </div>
+    </div>
+
+    <div class="article_content">
+      <%= markdown @article.content %> <% if @article.document? %>
+      <div class="article_document">
+        <%= link_to "Download #{article.document.file.filename}", article.document_url %>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</section>

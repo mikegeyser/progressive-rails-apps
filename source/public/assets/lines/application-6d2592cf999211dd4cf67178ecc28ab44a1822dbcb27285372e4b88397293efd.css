@@ -1,0 +1,1101 @@
+@import url(pygments.css);
+@import url(//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic,900,900italic);
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,700);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900);
+@import url(/fira-mono/fira-mono.css);
+/* 300, 400, 600 */
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+/* 300, 400, 600 */
+@import url(/iconfont/iconfont.css);
+/*
+ * Variables
+ */
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+/* 300, 400, 600 */
+@import url(/iconfont/iconfont.css);
+/*
+ * Variables
+ */
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+@import url(/iconfont/iconfont.css);
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+@import url(/iconfont/iconfont.css);
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+@import url(/iconfont/iconfont.css);
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+@import url(/iconfont/iconfont.css);
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+@import url(/fira-mono/fira-mono.css);
+@import url(/iconfont/iconfont.css);
+/* line 3, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar {
+  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #100719;
+  color: #fff;
+  z-index: 100;
+  overflow: visible;
+}
+/* line 14, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  line-height: 56px;
+  font-size: 1.063rem;
+  height: 56px;
+}
+/* line 23, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons form.button_to {
+  display: inline-block;
+}
+/* line 26, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons a.btn, #navbar .navbar-inner .buttons input.btn {
+  font-size: 1.063rem;
+  border: 0 none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Merriweather Sans", sans-serif;
+}
+/* line 36, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons a.btn:hover, #navbar .navbar-inner .buttons input.btn:hover {
+  background-color: #2a1241;
+}
+/* line 39, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons a.btn.highlight, #navbar .navbar-inner .buttons input.btn.highlight {
+  background-color: #c10020;
+}
+/* line 41, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .navbar-inner .buttons a.btn.highlight:hover, #navbar .navbar-inner .buttons input.btn.highlight:hover {
+  background-color: #f40028;
+}
+/* line 48, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu {
+  background-color: #100719;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+/* line 55, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+/* line 60, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner ul {
+  list-style: none;
+  border-top: 1px solid #403947;
+  padding-top: 1em;
+}
+/* line 64, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner ul li {
+  font-size: 1.063rem;
+}
+/* line 69, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner ul li.small {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+}
+/* line 74, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner ul + ul {
+  margin-top: 1em;
+}
+/* line 78, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  display: block;
+  padding: 0.5em 1em;
+}
+/* line 84, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+#navbar .submenu .submenu-inner a:hover {
+  background-color: #2a1241;
+}
+
+/* line 92, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu {
+  float: right;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  position: relative;
+}
+/* line 98, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu .stripes {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  transition: all 0.3s ease;
+}
+/* line 107, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu .stripes:before, .btn-menu .stripes:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+/* line 115, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu .stripes:before {
+  transform: translateY(-250%) rotate(0deg);
+}
+/* line 118, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu .stripes:after {
+  transform: translateY(250%) rotate(0deg);
+}
+/* line 123, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu.active .stripes {
+  transform: translate3d(-50%, -50%, 0) rotate(90deg);
+  background-color: transparent;
+}
+/* line 126, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu.active .stripes:before {
+  transform: translateY(0%) rotate(45deg);
+}
+/* line 129, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu.active .stripes:after {
+  transform: translateY(0%) rotate(-45deg);
+}
+/* line 134, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.btn-menu:hover {
+  background-color: #2a1241;
+}
+
+/* line 139, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.spacer {
+  height: 56px;
+  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin-bottom: 80px;
+}
+
+/*
+ * Markdown Cheatsheet
+ */
+/* line 151, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet {
+  position: fixed;
+  display: none;
+  max-width: calc(960px - 4em);
+  width: calc(100% - 4em);
+  z-index: 50;
+  margin: 0 auto;
+  top: calc(56px + 2em);
+  left: 0;
+  right: 0;
+  bottom: 2em;
+  overflow: visible;
+  font-family: "Fira Mono", monospace;
+}
+/* line 164, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-close {
+  position: absolute;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 3px;
+  background-color: #c10020;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  right: -24px;
+  top: -24px;
+  transition: all 0.3s ease;
+}
+/* line 179, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-close:hover {
+  background-color: #f40028;
+}
+/* line 183, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+  z-index: 1;
+  padding: 2em;
+  font-size: 1.063rem;
+}
+/* line 194, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner h2 {
+  margin-top: 0;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.063rem;
+  color: #9793a0;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+/* line 203, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner p {
+  margin-bottom: 22px;
+}
+/* line 206, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner a {
+  border-bottom: 1px solid #9793a0;
+  color: #100719;
+}
+/* line 209, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner a:hover {
+  border-bottom-color: #c10020;
+  color: #c10020;
+}
+/* line 214, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-inner .formatting {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 218, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/navbar.scss */
+.cheatsheet .cheatsheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 7, 25, 0.8);
+  z-index: 0;
+}
+
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+/* 300, 400, 600 */
+/*
+ * Variables
+ */
+/* line 3, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+html, body {
+  font-size: 16px;
+}
+
+/* line 12, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+body {
+  height: 100%;
+  background-color: #fff;
+}
+/* line 14, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* line 19, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+img, div {
+  border: 0;
+  display: block;
+}
+
+/* line 21, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+div, header, footer {
+  display: block;
+  overflow: hidden;
+}
+
+/* line 23, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+}
+
+/* line 29, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+a {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+/* line 33, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+a:hover {
+  color: #ee4422;
+}
+
+/* line 36, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+i, em {
+  font-style: italic;
+}
+
+/* line 37, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+strong, b {
+  font-weight: bold;
+}
+
+/* line 39, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+ul li {
+  list-style-position: outside;
+}
+
+/* line 41, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+hr {
+  display: block;
+  margin: 80px auto !important;
+  height: 2px;
+  background-color: #9793a0;
+  border: none;
+  width: 50%;
+}
+
+/* line 43, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+input, textarea, input[type="submit"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+/* line 48, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+.float-right {
+  float: right;
+  margin: 15px 0 5px 10px;
+}
+
+/* line 49, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+.clearfix {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+/* line 51, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 52, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 55, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+div.rss {
+  display: none;
+}
+
+/*--------------------------------------------------------*/
+/*------------------------  HEADER  ----------------------*/
+/*--------------------------------------------------------*/
+/* line 61, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+#topbar {
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 0;
+  background-color: #000;
+}
+/* line 66, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+#topbar div {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 67, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+#topbar .right {
+  float: right;
+}
+/* line 68, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+#topbar a {
+  color: #aaa;
+}
+
+/* line 71, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+header {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.1em 0;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 1.250em;
+}
+/* line 78, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+header a {
+  color: #000;
+}
+/* line 80, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+header a:hover {
+  color: #ee4422;
+}
+/* line 82, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+header #logo {
+  float: left;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* line 83, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+header #lines {
+  float: right;
+}
+
+/* line 86, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/general.scss */
+.container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+/* 300, 400, 600 */
+/*
+ * Variables
+ */
+/* line 3, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article {
+  max-width: 960px;
+  font-family: "Merriweather", "Georgia", serif;
+  line-height: 1.5em;
+  color: #100719;
+}
+/* line 10, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+}
+/* line 14, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header, .article .article_teaser, .article .article_content {
+  margin: 0 auto;
+}
+/* line 17, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header *, .article .article_teaser *, .article .article_content * {
+  margin: 1.1em auto;
+}
+/* line 18, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header > *, .article .article_teaser > *, .article .article_content > * {
+  padding: 0 13%;
+}
+/* line 19, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header > blockquote, .article .article_teaser > blockquote, .article .article_content > blockquote {
+  padding: 0 5%;
+}
+/* line 20, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header > p img, .article .article_teaser > p img, .article .article_content > p img {
+  max-width: 100%;
+  margin: 3em auto;
+}
+/* line 26, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header {
+  text-align: center;
+}
+/* line 28, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header h1 {
+  font-size: 3.0em;
+  font-weight: 900;
+  line-height: 120%;
+  color: #100719;
+}
+/* line 33, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header h1 a {
+  color: #100719;
+}
+/* line 34, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header h1 a:hover {
+  color: #c10020;
+}
+/* line 36, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #9793a0;
+  line-height: 120%;
+}
+/* line 42, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_header .author_name {
+  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+/* line 49, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .hero_image {
+  text-align: center;
+}
+/* line 51, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .hero_image a, .article .hero_image img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 58, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_teaser {
+  font-size: 1.375em;
+  line-height: 1.8em;
+  font-weight: 400;
+}
+/* line 64, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .more-link {
+  display: block;
+  margin: 0 auto 2em auto;
+  text-align: center;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+}
+/* line 69, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .more-link a {
+  margin: 0;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1.25rem;
+  padding: 5px 10px;
+  color: #4d4d4d;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+/* line 81, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .more-link a:hover {
+  background-color: #e6e6e6;
+}
+/* line 86, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content {
+  line-height: 1.9em;
+}
+/* line 89, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content a {
+  border-bottom: 1px solid #9793a0;
+}
+/* line 91, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content a:hover {
+  color: #c10020;
+  border-bottom: 1px solid #c10020;
+}
+/* line 94, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h1, .article .article_content h2, .article .article_content h3, .article .article_content h4, .article .article_content h5, .article .article_content h6 {
+  margin-top: 1.8em;
+  line-height: 120%;
+  color: #100719;
+}
+/* line 95, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h2, .article .article_content h3, .article .article_content h4, .article .article_content h5 {
+  font-weight: 700;
+}
+/* line 96, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h6 {
+  font-weight: 600;
+}
+/* line 98, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h1 {
+  font-size: 2.5em;
+}
+/* line 99, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h2 {
+  font-size: 2.0em;
+}
+/* line 100, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h3 {
+  font-size: 1.5em;
+  color: #c10020;
+  margin-bottom: 1.0em;
+}
+/* line 104, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h3 a {
+  color: #c10020;
+}
+/* line 105, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h3 a:hover {
+  color: #100719;
+  border-bottom: 1px solid #100719;
+}
+/* line 107, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h4 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+/* line 108, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h5 {
+  font-size: 1.25em;
+}
+/* line 109, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h6 {
+  font-size: 1.25em;
+  color: #9793a0;
+}
+/* line 111, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content h6 a {
+  color: #9793a0;
+}
+/* line 114, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content p {
+  font-size: 1.125em;
+  display: block;
+}
+/* line 117, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content p a {
+  color: #100719;
+}
+/* line 118, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content p a:hover {
+  color: #c10020;
+}
+/* line 122, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 124, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content br {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 126, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content ul, .article .article_content ol {
+  list-style: none;
+  font-size: 1.125rem;
+  margin-left: 0;
+  margin-right: 2em;
+}
+/* line 131, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content ul li, .article .article_content ol li {
+  margin: 0.75em 0;
+  padding-left: 1.5em;
+  line-height: 1.4em;
+  list-style-type: none;
+  position: relative;
+}
+/* line 136, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content ul li:before, .article .article_content ol li:before {
+  top: 0.03em;
+  left: 0;
+  content: '\2022 ';
+  color: #9793a0;
+  font-size: 2em;
+  position: absolute;
+}
+/* line 147, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content ol {
+  counter-reset: list;
+}
+/* line 149, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content ol li {
+  counter-increment: list;
+}
+/* line 151, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content ol li:before {
+  content: counter(list) ".";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.125rem;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+}
+/* line 161, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content ol ol {
+  counter-reset: sublist;
+}
+/* line 163, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content ol ol li {
+  counter-increment: sublist;
+  padding-left: 3rem;
+}
+/* line 166, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content ol ol li:before {
+  content: counter(list) "." counter(sublist) ".";
+}
+/* line 173, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content svg {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+/* line 179, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content iframe {
+  width: auto;
+  max-width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* line 187, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content blockquote {
+  font-family: "Merriweather", "Georgia", serif;
+  font-style: italic;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #999;
+  text-align: center;
+}
+/* line 194, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content blockquote em {
+  font-weight: 700;
+}
+/* line 195, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content blockquote strong {
+  font-weight: 900;
+}
+/* line 199, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content blockquote strong:last-child em, .article .article_content img + br + strong em {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.0rem;
+  color: #100719;
+}
+/* line 202, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content img + br + strong em {
+  display: block;
+  text-align: center;
+  margin-top: -3em;
+}
+/* line 206, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content pre {
+  border-left: 2px solid #9793a0;
+  font-family: "Fira mono", monospace;
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 140%;
+  color: #9793a0;
+  padding: 0 20px;
+}
+/* line 216, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content .highlight pre {
+  font-size: 0.875em;
+}
+/* line 218, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content table {
+  border: none;
+  text-align: left;
+  margin: 40px 13%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+/* line 224, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content table th, .article .article_content table td {
+  border: 1px solid #9793a0;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  line-height: 120%;
+  font-size: 1.25em;
+  color: #100719;
+  padding: 0.6em;
+}
+/* line 232, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content table th {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* line 233, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content table td {
+  font-weight: 400;
+}
+/* line 237, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content .article_document a {
+  display: block;
+  text-align: center;
+  background-color: #100719;
+  color: #fff;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+/* line 246, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_content .article_document a:hover {
+  background-color: #c10020;
+}
+/* line 251, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_footer {
+  margin: 4em 13%;
+  line-height: 130%;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  color: #9793a0;
+  text-align: left;
+}
+/* line 257, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_footer a {
+  font-weight: 600;
+}
+/* line 259, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_footer a:hover {
+  color: #100719;
+}
+/* line 263, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_googleplus {
+  text-align: center;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  margin-top: 80px;
+}
+/* line 267, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_googleplus a {
+  margin: 0 auto;
+  display: inline-block;
+  color: #100719;
+  line-height: 32px;
+  font-size: 1.25rem;
+}
+/* line 273, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_googleplus a:before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  float: left;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: url("/assets/gplus.svg") #c10020 center center no-repeat;
+  background-size: 80% auto;
+}
+/* line 285, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article .article_googleplus a:hover {
+  color: #b1aeb8;
+}
+/* line 290, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article.small {
+  max-width: 50%;
+  float: left;
+}
+/* line 294, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article.small .article_header h1 {
+  font-size: 1.75rem;
+}
+/* line 295, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article.small .article_header h2 {
+  display: none;
+}
+/* line 298, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article.small .article_teaser p {
+  font-size: 1.0rem;
+  line-height: 1.5em;
+}
+/* line 300, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/article.scss */
+.article.small .article_googleplus, .article.small .article_footer, .article.small .article_content {
+  display: none;
+}
+
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+/* 300, 400, 600 */
+/*
+ * Variables
+ */
+/* line 3, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/pagination.scss */
+#pagination {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  margin: 1.8em auto 0 auto;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  text-align: center;
+}
+/* line 10, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/pagination.scss */
+#pagination a {
+  color: #9793a0;
+}
+/* line 12, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/pagination.scss */
+#pagination a:hover {
+  color: lighen(#9793a0, 10%);
+}
+/* line 15, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/pagination.scss */
+#pagination .newer, #pagination .older, #pagination .page {
+  margin: 0 1em;
+}
+/* line 16, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/pagination.scss */
+#pagination .current {
+  color: #100719;
+}
+
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+/* 300, 400, 600 */
+/*
+ * Variables
+ */
+/* line 3, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/footer.scss */
+footer, #footer {
+  margin-top: 2em;
+  background-color: #100719;
+  color: #fff;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  line-height: 120%;
+}
+/* line 9, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/footer.scss */
+footer .container, #footer .container {
+  margin: 1.5em auto;
+  max-width: 960px;
+}
+/* line 12, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/footer.scss */
+footer .container p, #footer .container p {
+  padding: 0.4em 13%;
+}
+/* line 14, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/footer.scss */
+footer .container p a, #footer .container p a {
+  color: #fff;
+  font-weight: 600;
+}
+/* line 15, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/footer.scss */
+footer .container p a:hover, #footer .container p a:hover {
+  color: #f40028;
+  text-decoration: underline;
+}
+
+/************************************************************************************
+smaller than 975px
+*************************************************************************************/
+@media screen and (max-width: 990px) {
+  /* line 5, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/media_queries.scss */
+  header {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+/************************************************************************************
+smaller than 800px
+*************************************************************************************/
+@media screen and (max-width: 800px) {
+  /* line 15, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/media_queries.scss */
+  html, body {
+    font-size: 16px;
+  }
+
+  /* line 18, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/media_queries.scss */
+  .article .article_header > *, .article .article_teaser > *, .article .article_content > * {
+    padding: 0 8%;
+  }
+}
+/************************************************************************************
+smaller than 600px
+*************************************************************************************/
+@media screen and (max-width: 600px) {
+  /* line 27, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/media_queries.scss */
+  html, body {
+    font-size: 14px;
+  }
+
+  /* line 28, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/media_queries.scss */
+  .article.small {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+/************************************************************************************
+smaller than 480px
+*************************************************************************************/
+@media screen and (max-width: 480px) {
+  /* line 35, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/media_queries.scss */
+  html, body {
+    font-size: 14px;
+  }
+
+  /* line 37, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/media_queries.scss */
+  .article .article_header h1 {
+    font-size: 2.5em;
+  }
+}
+/*
+ * Place your custom CSS and overrides here.
+ * Make sure to only use the override file for your custom CSS. The original CSS files may be overwritten 
+ * with newer gem versions.
+ * 
+ */
+/*
+ * Mixins
+ */
+/*
+ * Imports
+ */
+/* 300, 400, 600 */
+/*
+ * Variables
+ */
+/*
+ * Alerts and messages
+ */
+/* line 5, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation, .alert {
+  background-color: #730035;
+  border: 0 none;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
+}
+/* line 13, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation.alert-success, .alert.alert-success {
+  background-color: #00c289;
+}
+/* line 14, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation.alert-notice, .alert.alert-notice {
+  background-color: #9793a0;
+}
+/* line 17, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation .close, .alert .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: block;
+  color: #fff;
+}
+/* line 25, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation h2, .alert h2 {
+  color: #fff;
+  margin-top: 0;
+  text-transform: none;
+}
+/* line 26, /Users/mikegeyser/Code/Talks/progressive-rails-apps/source/app/assets/stylesheets/lines/messages.scss */
+#error_explanation ul, .alert ul {
+  padding-left: 1em;
+}

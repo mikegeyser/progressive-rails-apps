@@ -21,13 +21,3 @@ media: 'all' %>
         }
     }
 </script>
-
-<script type="text/javascript">
-    let isProduction = <%= Rails.env.production? %>;
-
-    if (isProduction && 'serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js');
-    }
-
-    
-</script>

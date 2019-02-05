@@ -14,9 +14,5 @@ class BlogController < ApplicationController
         @first_article.teaser = nil unless @first_article.teaser.present?
         end
       end
-    
-      if params[:fragment]
-        render layout: false
-      end
     end
 end

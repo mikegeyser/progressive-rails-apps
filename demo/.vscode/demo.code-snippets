@@ -1,0 +1,168 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  "Workbox config": {
+    "scope": "javascript,typescript",
+    "prefix": "_1",
+    "body": [
+      "module.exports = {",
+      "  \"globDirectory\": \"public/\",",
+      "  \"globPatterns\": [",
+      "    \"assets/**/*.{js,gz,css,txt}\",",
+      "    \"third-party/**/*.{js,gz,css,txt}\",",
+      "    \"404.html\"",
+      "  ],",
+      "  \"swSrc\": \"lib/workbox/sw.js\",",
+      "  \"swDest\": \"public/sw.js\",",
+      "  \"injectionPointRegexp\": /(const precacheManifest = )\\[\\](;)/",
+      "  };"
+    ],
+    "description": "Initialise the workbox config"
+  },
+  "Templated service worker": {
+    "scope": "javascript,typescript",
+    "prefix": "_2",
+    "body": [
+      "importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js');",
+      "",
+      "workbox.setConfig({",
+      "  debug: true",
+      "});",
+      "",
+      "const precacheManifest = [];",
+      "",
+      "workbox.precaching.precacheAndRoute(precacheManifest);",
+      "",
+      "self.skipWaiting();"
+    ],
+    "description": "Basic templated service worker"
+  },
+  "Install service worker": {
+    "scope": "javascript,typescript,html",
+    "prefix": "_3",
+    "body": [
+      "<script type=\"text/javascript\">",
+      "  let isProduction = <%= Rails.env.production? %>;",
+      "",
+      "  if (isProduction && 'serviceWorker' in navigator) {",
+      "    navigator.serviceWorker.register('/sw.js');",
+      "",
+      "    navigator.serviceWorker.addEventListener('controllerchange', () => {",
+      "      window.location.reload();",
+      "    });",
+      "  }",
+      "</script>"
+    ],
+    "description": "Install service worker"
+  },
+  "Runtime caching of images": {
+    "scope": "javascript,typescript",
+    "prefix": "_4",
+    "body": [
+      "workbox.routing.registerRoute(",
+      "  /.*.(?:png|jpg|jpeg|svg)$/,",
+      "  workbox.strategies.cacheFirst({",
+      "    cacheName: 'images',",
+      "    plugins: [",
+      "      new workbox.expiration.Plugin({",
+      "        maxEntries: 60",
+      "      })",
+      "    ]",
+      "  }),",
+      "  'GET'",
+      ");"
+    ],
+    "description": "Runtime caching of images"
+  },
+  "Serving up the page fragments": {
+    "scope": "ruby,erb",
+    "prefix": "_5",
+    "body": ["def ${0:head}", "  render 'shared/_${0:head}', layout: false", "end"],
+    "description": "Serving up the page fragments"
+  },
+  "Disabling layout if a fragment is specified": {
+    "scope": "ruby,erb",
+    "prefix": "_6",
+    "body": ["if params[:fragment]", "  render layout: false", "end"],
+    "description": "Disabling layout if a fragment is specified"
+  },
+  "Page and content strategies": {
+    "scope": "javascript,typescript",
+    "prefix": "_7",
+    "body": [
+      "let contentStrategy = workbox.strategies.staleWhileRevalidate({",
+      "  cacheName: 'content'",
+      "});",
+      "",
+      "let pageStrategy = workbox.strategies.cacheFirst({",
+      "  cacheName: 'page'",
+      "});"
+    ],
+    "description": "Page and content strategies"
+  },
+  "Streaming strategy": {
+    "scope": "javascript,typescript",
+    "prefix": "_8",
+    "body": [
+      "let streamingStrategy = workbox.streams.strategy([",
+      "  () => '<html>',",
+      "  () => '<head>',",
+      "  () => /* head */,",
+      "  () => '</head>',",
+      "  () => '<body>',",
+      "  () => /* body */,",
+      "  () => /* footer */,",
+      "  () => '</body>',",
+      "  () => '</html>'",
+      "]);"
+    ],
+    "description": "Streaming strategy"
+  },
+  "Use page strategy": {
+    "scope": "javascript,typescript",
+    "prefix": "_9",
+    "body": ["pageStrategy.makeRequest({ request: '/${0:head}' });"],
+    "description": "Use page strategy"
+  },
+  "Use content strategy": {
+    "scope": "javascript,typescript",
+    "prefix": "_10",
+    "body": [
+      "async ({ event, url }) => {",
+      "  let request = {",
+      "    request: `${url}?fragment=true`",
+      "  };",
+      "",
+      "  return contentStrategy.makeRequest(request);",
+      "};"
+    ],
+    "description": "Use content strategy"
+  },
+  "Use streaming strategy": {
+    "scope": "javascript,typescript",
+    "prefix": "_11",
+    "body": [
+      "workbox.routing.registerRoute(/blog/, streamingStrategy, 'GET');",
+      "workbox.routing.registerRoute(/blog/.*/, streamingStrategy, 'GET');",
+      "workbox.routing.registerRoute(//$/, streamingStrategy, 'GET');"
+    ],
+    "description": "Use streaming strategy"
+  },
+  "Handle cache misses": {
+    "scope": "javascript,typescript",
+    "prefix": "_12",
+    "body": [
+      "try {",
+      "  return await contentStrategy.makeRequest(request);",
+      "} catch (error) {",
+      "  return await caches.match('404.html');",
+      "}"
+    ],
+    "description": "Handle cache misses"
+  }
+}

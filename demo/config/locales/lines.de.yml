@@ -1,0 +1,64 @@
+de:
+  lines:
+    buttons:
+      new_article: 'Neuer Artikel'
+      all_articles: 'Alle Artikel'
+      dashboard: 'Dashboard'
+      visit_blog: 'Zum Blog'
+      edit_article: 'Artikel bearbeiten'
+      preview: 'Vorschau'
+      save_article: 'Artikel speichern'
+      cancel: 'Abbrechen'
+      edit: 'Ändern'
+      all_authors: 'Alle Autoren'
+      new_author: 'Neuer Autor'
+      edit_author: 'Autor bearbeiten'
+      save_author: 'Autor speichern'
+      author: 'Autor'
+      publish: 'Veröffentlichen'
+      unpublish: 'Veröffentlichung rückgängig machen'
+      change_attachment: 'Anhang ändern'
+      remove_attachment: 'Anhang löschen'
+      attach_document: 'Dokument anhängen'
+      upload_image: 'Bild hochladen'
+      remove_hero_image: 'Artikel-Bild entfernen'
+      select_hero_image: 'Artikel-Bild wählen'
+      change: 'Ändern'
+      insert_image: 'Bild einfügen'
+      login: 'Anmelden'
+      logout: 'Abmelden'
+      formating_help: 'Formatierungshilfe'
+      about: 'Über Lines'
+
+    published_articles: 'Veröffentlichte Artikel'
+    unpublished_articles: 'Unveröffentlichte Artikel'
+    confirm: 'Wirklich löschen?'
+    additional_info: 'Weitere Informationen'
+    forgot_password: 'Passwort vergessen?'
+    or: 'oder'
+    go_back_to_blog: 'zurück zum Blog.'
+    please_login: 'Bitte melde dich an, wenn du den Administrationsbereich betreten willst.'
+    login_error: 'E-Mail oder Passwort ist ungültig.'
+    logged_in_as: 'Angemeldet als'
+
+  activerecord:
+    models:
+      lines/author:
+        one: 'Autor'
+        other: 'Autoren'
+      linens/article: 'Artikel'
+    attributes:
+      lines/author:
+        description: 'Beschreibung'
+        email: 'E-Mail'
+        gplus_profile: 'Webseite'
+      lines/article:
+        title: 'Titel'
+        sub_title: 'Untertitel'
+        teaser: 'Teaser'
+        content: 'Artikel Inhalt'
+        gplus_url: 'Website'
+        author_ids: 'Autoren'
+      lines/user:
+        email: 'E-Mail'
+        password: 'Passwort'

@@ -1,0 +1,17 @@
+@import 'variables_and_mixins';
+
+#pagination {
+  font-family: $SourceSansPro;
+  font-weight: 600;
+  margin: 1.8em auto 0 auto;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  text-align: center;
+  a {
+    color: $grey;
+    &:hover { color: lighen($grey, 10%); }
+  }
+
+  .newer, .older, .page { margin: 0 1em;}
+  .current { color: $black; }
+}

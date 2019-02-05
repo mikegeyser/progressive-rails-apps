@@ -1,0 +1,14 @@
+<article>
+  <div class="hero_image pull-left img-responsive" style="background-image: url('<%= article_small.image_url %>');">
+    &nbsp;
+  </div>
+
+  <div class="text">
+    <p class="small-paragraph"><%= article_small.sub_title %></p>
+    <h3><%= link_to article_small.title, article_path(article_small) %></h3>
+    <p>by <%= display_article_authors(article_small) %></p>
+    <p><%= render_teaser(article_small).html_safe %></p>
+    <h3><small><%= link_to "read more... ", article_path(article_small) %></small></h3>
+  </div>
+  <div class="clearfix"></div>
+</article>

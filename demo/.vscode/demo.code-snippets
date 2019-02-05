@@ -115,6 +115,7 @@
       "  () => /* head */,",
       "  () => '</head>',",
       "  () => '<body>',",
+      "  () => /* header */,",
       "  () => /* body */,",
       "  () => /* footer */,",
       "  () => '</body>',",
@@ -126,7 +127,7 @@
   "Use page strategy": {
     "scope": "javascript,typescript",
     "prefix": "_9",
-    "body": ["pageStrategy.makeRequest({ request: '/${0:head}' });"],
+    "body": ["pageStrategy.makeRequest({ request: '/${0:head}' })"],
     "description": "Use page strategy"
   },
   "Use content strategy": {
@@ -135,11 +136,11 @@
     "body": [
       "async ({ event, url }) => {",
       "  let request = {",
-      "    request: `${url}?fragment=true`",
+      "    request: `\\${url}?fragment=true`",
       "  };",
       "",
       "  return contentStrategy.makeRequest(request);",
-      "};"
+      "},"
     ],
     "description": "Use content strategy"
   },
@@ -148,8 +149,8 @@
     "prefix": "_11",
     "body": [
       "workbox.routing.registerRoute(/blog/, streamingStrategy, 'GET');",
-      "workbox.routing.registerRoute(/blog/.*/, streamingStrategy, 'GET');",
-      "workbox.routing.registerRoute(//$/, streamingStrategy, 'GET');"
+      "workbox.routing.registerRoute(/blog\\/.*/, streamingStrategy, 'GET');",
+      "workbox.routing.registerRoute(/\\/\\$/, streamingStrategy, 'GET');"
     ],
     "description": "Use streaming strategy"
   },

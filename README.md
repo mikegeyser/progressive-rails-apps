@@ -1,4 +1,15 @@
-# 1. configure
+# Progressive Rails Apps
+
+Technology repeats, like a record. Patterns and practices continually wax and wane in popularity, but never return to exactly the same groove - instead they progress a little each time. This is true with the spin towards building server-side-rendered (SSR) web applications; a trend driven by the need to improve the performance of rampant, javascript-heavy sites. This time round however, we are armed with the key technology of the Progressive Web App (PWA) movement - the Service Worker. Why do we care? Because much of the real innovation in the PWA space is happening off of the main thread.
+
+This talk will explore practical, alternative architectures for web applications - blending the world of PWAs and SSR apps. Coding on an archetypal Ruby-on-Rails project, we will introduce pre-caching, navigation preloading, analytics and offline content - highlighting the incremental performance improvements. While the talk will focus on Ruby, the ideas can easily transpose to any language and framework you dig.
+
+
+This talk was given at [RubyFuza 2019](https://www.rubyfuza.org/) by [@mikegeyser](https://twitter.com).
+
+# The Demo
+
+## 1. configure
 
 workbox-config.js
 
@@ -28,7 +39,7 @@ workbox.precaching.precacheAndRoute(precacheManifest);
 self.skipWaiting();
 ```
 
-# 2. Installing and running
+## 2. Installing and running
 
 app/views/shared/\_head.html.erb
 
@@ -56,7 +67,7 @@ app/views/shared/\_head.html.erb
 rake workbox:server
 ```
 
-# 3. Runtime caching
+## 3. Runtime caching
 
 lib/workbox/sw.js
 
@@ -75,7 +86,7 @@ workbox.routing.registerRoute(
 );
 ```
 
-# 4. Fragments
+## 4. Fragments
 
 app/controllers/application_controller.rb
 
@@ -103,7 +114,7 @@ app/controller/article_controller.rb
     end
 ```
 
-# 5. Streaming
+## 5. Streaming
 
 ```js
 let contentStrategy = workbox.strategies.staleWhileRevalidate({
@@ -157,7 +168,7 @@ workbox.routing.registerRoute(/blog\/.*/, streamingStrategy, 'GET');
 workbox.routing.registerRoute(/\/$/, streamingStrategy, 'GET');
 ```
 
-# 6. Handle cache misses
+## 6. Handle cache misses
 
 ```js
 try {
